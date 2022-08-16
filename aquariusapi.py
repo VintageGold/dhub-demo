@@ -1,6 +1,5 @@
 import requests
 import pandas as pd
-import streamlit as st
 
 def query(search_term:str,
         response_size:int=5
@@ -30,7 +29,7 @@ def query(search_term:str,
     response = requests.post(link,json=query)
 
     if len(response.json()["hits"]["hits"]) > 0:
-        
+
         df_payload = pd.DataFrame(response.json()["hits"]["hits"])
 
         df_source = pd.json_normalize(df_payload["_source"])
