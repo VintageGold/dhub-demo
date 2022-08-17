@@ -1,12 +1,15 @@
 # DHUB
 ## Metadata
 * README
-* Author
+* Author(s)
 * Version
-* Tags
+* Tags -> Used for topics or ecosystems (#Compound, #Defi)
 * Licenses
+* Collection Methodology - Attached a notebook or file?
 * Programming language/object type/ file type
 * Relevant papers or projects for reference
+* File Link
+* Sample Link
 
 ## Data Characteristics Automated
 * Feature Space -> Features:types
