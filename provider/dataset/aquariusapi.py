@@ -40,7 +40,7 @@ def query(search_term:str,
 
 def get_asset_metadata(dids:list):
 
-    base_url = "https://v4.aquarius.oceanprotocol.com/api/aquarius/assets/"
+    base_url = "https://aquarius.algovera.ai/api/aquarius/assets/"
 
 
     metadata_list = list()
@@ -48,6 +48,24 @@ def get_asset_metadata(dids:list):
     for did in dids:
 
         endpoint = f'metadata/{did}'
+        query = base_url+endpoint
+        response = requests.get(query)
+
+        metadata_list.append(response.json())
+
+    return metadata_list
+
+
+def get_asset_ddo(dids:list):
+
+    base_url = "https://aquarius.algovera.ai/api/aquarius/assets/"
+
+
+    metadata_list = list()
+
+    for did in dids:
+
+        endpoint = f'ddo/{did}'
         query = base_url+endpoint
         response = requests.get(query)
 
